@@ -16,13 +16,14 @@ const Jobcategories = () => {
                 {
                     category.map((item,idx)=>{
                         return (
-                            <div key={idx} className="rounded-md bg-blue-100 p-5 text-start">
+                            <div key={idx} className="rounded-md bg-indigo-100 p-5 text-start">
                                 <img src={logo} />
                                 <h3 className="my-3 text-lg font-medium">{item.category_name}</h3>
                                 <p className="text-sm text-slate-500">{item.availability}</p>
                             </div>
                         )
                     })
+
                 }
             </div>
         </div>

@@ -1,4 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { addToLOcalStorage } from "../localStorage/localstorage";
 
 
 const JobInfo = () => {
@@ -19,12 +20,12 @@ const JobInfo = () => {
                             <h3 className="text-lg font-semibold mb-2">Job Details</h3>
                             <div className="border-b-2 text-black"></div>
                             <p><span className="text-lg font-semibold" >Salary : </span><span className="text-sm">{item.salary}</span></p>
-                            <h3 className="text-lg font-semibold mb-2">Contact Information</h3>
+                            <h3 className="text-lg font-semibold my-2 ">Contact Information</h3>
                             <div className="border-b-2 text-black"></div>
                             <p><span className="text-lg font-semibold" >Phone : </span><span className="text-sm">{item.contact_information.phone}</span></p>
 
                         </div>
-                        <div><button className="p-2 rounded-md my-2 text-white bg-[#9873FF] w-[100%]">Apply Now</button></div>
+                        <div><button onClick={()=>addToLOcalStorage(jobId)} className="p-2 rounded-md my-2 text-white bg-[#9873FF] w-[100%]">Apply Now</button></div>
                         </div>
                 </div>
                 )
