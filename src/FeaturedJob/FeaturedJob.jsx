@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 
 
 const FeaturedJob = ({job}) => {
@@ -10,7 +11,7 @@ const FeaturedJob = ({job}) => {
             </div> 
             <h1 className="text-xl font-semibold">{job_title}</h1>
             <p>{company_name}</p>
-            <button className="p-2 rounded-md my-2 text-white bg-[#9873FF]">View Details</button>
+            <NavLink to={`/jobInfo/${id}`}><button className="p-2 rounded-md my-2 text-white bg-[#9873FF]">View Details</button></NavLink>
 
         </div>
     );
